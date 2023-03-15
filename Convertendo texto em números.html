@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha(){
+	document.write("<br><br>")
+
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+
+	}
+
+	var nome = prompt ("Informe seu nome:")
+	var nomeTime = prompt (nome + ", informe o nome do seu time:")
+	var vitorias = parseInt(prompt(nome + ", insira a quantidade de vitórias do " +nomeTime + ":"));
+	var empates = parseInt(prompt(nome + ", insira a quantidade de empates do " + nomeTime + ":"));
+	var pontos = vitorias * 3 + empates
+
+	mostra(nome + ", o " + nomeTime + " está com " + pontos + " pontos!");
+
+
+</script>

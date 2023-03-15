@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+// limite de chute
+
+		function pulaLinha(){
+			document.write("<br><br>")
+
+		}
+
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha();
+
+		}
+
+		var nome = prompt("Digite seu nome:");	
+		var numeroPensado =  Math.round(Math.random() * 10); // random * número retornará numeros aleatórios
+		console.log(numeroPensado) //(serve para realizar testes no console do JS no navegador e verificar qual número será sorteado.)
+		var tentativas = 1;
+
+		while (tentativas <= 3) {
+
+			var chute = parseInt(prompt("Digite seu palpite:"));
+			if (chute == numeroPensado) {
+
+				mostra(nome + ", você ACERTOOOU! O número pensado foi " + numeroPensado + " Parabéns!!")
+			} else {
+				mostra(nome + ", não foi dessa vez.")
+			}
+			tentativas++;
+		}	
+
+		mostra("FIM")
+</script>
+

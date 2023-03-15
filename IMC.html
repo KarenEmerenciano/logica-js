@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha(){
+	document.write("<br><br>")
+
+}
+
+function mostra(frase){
+	document.write(frase);
+	pulaLinha();
+
+}
+
+function calculoImc(peso, altura){
+
+	return peso / (altura * altura);
+	
+//mostra("O IMC calculado é " + Math.round(imc));
+}
+
+	//calculoImc(73, 1.71);
+
+
+//var imcPessoa1 = calculoImc(75,1.75);
+//var imcPessoa2 = calculoImc(71,1.60);
+
+//mostra(Math.round(imcPessoa1));
+//mostra(Math.round (imcPessoa2));
+// usando o mostra fora da função, permite que essa instrução apareça apenas quando for chamada e não toda vez que a função calculoImc seja utilizada.
+
+// interação com o usuário
+
+var nome = prompt("Informe seu nome")
+var alturaInformada = prompt(nome + ", informe seu peso")
+var pesoInformado = prompt(nome + ", informe sua altura")
+
+var imc = calculoImc(alturaInformada, pesoInformado);
+
+mostra(nome + ", o seu IMC é " + Math.round(imc));
+
+	if (imc < 18.5) {
+
+		mostra(nome + "ATENÇÃO! Conforme a OMS, seu IMC está ABAIXO do recomendado!")
+	}
+
+
+	if (imc > 35) {
+		mostra(nome + "ATENÇÃO! Conforme a OMS, seu IMC está ACIMA do recomendado!")
+	}
+
+	if (imc >= 18.5 && imc <= 35) {
+
+		mostra(nome + ", PARABÉNS! Conforme a OMS, seu IMC está DENTRO do recomendado!")	
+	}
+
+
+
+</script>
+

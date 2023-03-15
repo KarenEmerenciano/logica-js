@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+// limite de chute
+
+		function pulaLinha(){
+			document.write("<br><br>")
+
+		}
+
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha();
+
+		}
+
+		for(var linha = 1; linha <= 3; linha++) {
+
+			for(var coluna = 1; coluna <= 10; coluna++){
+				
+				document.write("*");
+			}
+			
+		pulaLinha();	
+		}
+
+		mostra("FIM")
+</script>
+
+<!-- desmembrando o for:
+for (var linha = 1; linha <= 3; linha++) 
+var linha = 1;  - variavel de inicialização, que será incrementada;
+linha <= 3 - condição, quando o for deve parar de repetir o que está em seu bloco; 
+linha++ - incremento, de quanto em quanto vamos incrementar algo ( = 1)
+o segundo for, serve para repetir as colunas, ou seja, cada * (no caso deve imprimir 10 vzs) <-->
+
+
